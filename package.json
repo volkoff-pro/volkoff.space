@@ -1,0 +1,53 @@
+{
+  "name": "volkoff.space",
+  "version": "0.0.1",
+  "description": "Volkoff.space",
+  "main": "index.js",
+  "engines": {
+    "node": "10.2.1",
+    "npm": "6.1.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "test": "jest --env=node --watch",
+    "lint": "eslint . && exit 0",
+    "lintfix": "eslint --fix . && exit 0",
+    "eslint-check": "eslint --print-config .eslintrc.json | eslint-config-prettier-check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/volkoff-pro/volkoff.space.git"
+  },
+  "keywords": [
+    "Development"
+  ],
+  "author": "Sergey Volkov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/volkoff-pro/volkoff.space/issues"
+  },
+  "homepage": "https://github.com/volkoff-pro/volkoff.space#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-recommended": "^2.0.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-react": "^7.8.2",
+    "eslint-plugin-standard": "^3.1.0",
+    "jest": "^22.4.4",
+    "nodemon": "^1.17.4",
+    "prettier": "^1.12.1",
+    "prettier-eslint": "^8.8.1"
+  }
+}
