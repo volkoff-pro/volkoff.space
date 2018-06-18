@@ -1,15 +1,10 @@
-dist: trusty
 sudo: false
 language: node_js
 node_js:
   - 10
-  - iojs
 branches:
   only:
   - develop
-cache:
-  directories:
-    - node_modules
 deploy:
   provider: heroku
   api_key:
