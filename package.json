@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node index.js",
     "server": "nodemon index.js",
-    "test": "jest --env=node",
+    "test": "jest --env=node --coverage --collectCoverageFrom=**/*js --collectCoverageFrom=!coverage/**/*js",
     "test-watch": "jest --env=node --watch",
     "lint": "eslint . && exit 0",
     "lintfix": "eslint --fix . && exit 0",
@@ -30,9 +30,14 @@
   },
   "homepage": "https://github.com/volkoff-pro/volkoff.space#readme",
   "dependencies": {
-    "express": "^4.16.3"
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongoose": "^5.1.5",
+    "morgan": "^1.9.0"
   },
   "devDependencies": {
+    "codecov.io": "^0.1.6",
+    "coveralls": "^3.0.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-airbnb-base": "^12.1.0",

@@ -1,9 +1,21 @@
+dist: trusty
 sudo: false
-
 language: node_js
 node_js:
   - 10
-
+  - iojs
 branches:
   only:
-    - develop
+  - develop
+cache:
+  directories:
+    - node_modules
+deploy:
+  provider: heroku
+  api_key:
+    secure: sW8JrE+opSyuS01Udg562Xg/ACBION1f+b+8gn/J+eRczRljZQsZRD0l0VjNJQFOEiVI77Bu909QaoJ+8hb+sJfeT5UDthdJ+xdFlVGMRUtd9c06FGxuQlbXV7LNFqTDIVOBbpprjqaj413AMRnnm9RBHn68Wp0bgR+30kGFBwsXpSa4Q8iME5DHmeo5MGVhOjUyrs4SIyc500Vc/Kbsoz9V7jG/DMF8AMZpyrIyuC+8nTMFc2uKiqdSSWoFR1sZViqwN/sxbNx3bCaWls2yo+KA0uA1zePu3avPK5AibWLq3oJdBZh3BmbkO3WpkzEVAM307ExMWyKlwVUh2zcbnCNkjiQMedt+fl2AxyaT1zpYKH3o+Xh220OHhcRYIp1OXDXa5+xiZQY8IxRuFjTNGg+1VGrOb9MXbhioSYUWHp7NExqXmKIvRRp2Yz9TP0CLUoVZk1p9r0UFFwwvEdv0XFihyL1Fo4oT4EF8LTZ4pYNYz184GbGcgFbfJOYBH2akPvrFxS0NYDXi8swP3LAW+lfFzNRyAmZmVmx8ZBKx2qOQROUq0HhguZGVmega6j54+PTga4o4hgN/PEiUwPfXzMXcVEdLj1Y1fsMqrS/YKhrgU9t5iJJvLwCQPo7KuESqzYr9B/aeNmoCD/a/n/WTsWRL4rZko7Ik+brciQ2FATA=
+  app:
+    develop: volkoff-space-dev
+after_success:
+  - cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js
+  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
