@@ -10,6 +10,4 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
 });
 
-// require('./routes/routes')(app);
-
 app.listen(server.PORT);
