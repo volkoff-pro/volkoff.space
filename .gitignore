@@ -64,5 +64,3 @@ typings/
 .vscode/
 coverage/
 
-# temp stuff
-client/
