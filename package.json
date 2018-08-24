@@ -10,6 +10,8 @@
   "scripts": {
     "start": "node index.js",
     "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "test": "jest",
     "test:client": "cd client && npm run test",
     "test:watch": "jest --watch",
@@ -53,6 +55,7 @@
   },
   "devDependencies": {
     "codecov.io": "^0.1.6",
+    "concurrently": "^3.6.1",
     "coveralls": "^3.0.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
