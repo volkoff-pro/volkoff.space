@@ -1,7 +1,5 @@
 # Third party
 node_modules/
-client/
-client/**
 client/node_modules/
 client/build
 client/public
